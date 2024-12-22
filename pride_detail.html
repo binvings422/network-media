@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Detail</title>
+    <style>
+        /* 기본 설정 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            background: #fff;
+        }
+
+        .container {
+            /* 전체 컨테이너의 상단 및 좌우 마진 조정 */
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            max-width: 1200px;
+            margin: 100px auto; /* 상단 및 하단 여백 80px */
+            padding: 0 100px;   /* 좌우 여백 40px */
+            gap: 35px;
+            align-items: start;
+        }
+
+        /* 좌측 섹션: 이미지 블록 */
+        .image-block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* 이미지들을 우측 정렬 */
+            gap: 30px;
+        }
+
+        .image-block img {
+            width: 80%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        /* 우측 섹션: 텍스트 블록 */
+        .text-block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .text-block h1 {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+
+        .text-block .meta {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 3px;
+        }
+
+        .text-block p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* 비슷한 작업 섹션 */
+        .related-works {
+            grid-column: span 2;
+            padding: 0 100px;
+            margin-top: 100px; /* Related Works 섹션 위의 마진 조정 */
+        }
+
+        .related-works h2 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .related-works .related-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-start;
+        }
+
+        .related-works .related-item img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .related-item a:hover img {
+            transform: scale(1.05); /* 호버 시 이미지 확대 */
+            transition: transform 0.3s;
+        }
+
+        /* 뒤로가기 버튼 */
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 30px;
+            color: black;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 뒤로가기 링크 -->
+    <a href="index.html" class="back-link">←</a>
+
+    <!-- 메인 컨테이너 -->
+    <div class="container">
+        <!-- 좌측 섹션 -->
+        <div class="image-block">
+            <!-- 좌측 이미지: 우측 정렬됨 -->
+            <img src="sources/Pride_표지-02.png" alt="Thumbnail">
+            <img src="sources/pride1.png" alt="Additional Image">
+            <img src="sources/pride2.png" alt="Additional Image">
+            <img src="sources/pride3.png" alt="Additional Image">
+        </div>
+
+        <!-- 우측 섹션 -->
+        <div class="text-block">
+            <h1>Pride for Conscience to Think</h1>
+            <p class="meta">2024년 7~8월 <br>레이아웃, 그래픽 디자인</p>
+            <p> 프라이드 먼스를 맞아 장혜영 전 정의당 의원과 인권운동사랑방 몽과 함께한 인터뷰 프로젝트입니다. 제도적 측면에서 사랑과 연대의 힘, 평등의 가치가 사회적 확장의 촉매가 되는 가능성을 고민하는 내용을 담고 있습니다.
+            </p>
+            <p>Instagram @expandedkr</p>
+        </div>
+    </div>
+
+    <!-- 비슷한 작업 섹션 -->
+    <div class="related-works">
+        <h2>Related Works</h2>
+        <div class="related-grid">
+            <!-- 첫 번째 작업물 -->
+            <div class="related-item">
+                <a href="sarock_detail.html">
+                    <img src="sources/여름밤에우린.png" alt="Related Work 1">
+                </a>
+            </div>
+            <!-- 두 번째 작업물 -->
+            <div class="related-item">
+                <a href="prideI_detail.html">
+                    <img src="sources/Pride_표지-06.png" alt="Related Work 2">
+                </a>
+            </div>
+            <!-- 세 번째 작업물 -->
+            <div class="related-item">
+                <a href="chess_detail.html">
+                    <img src="sources/체스피스.png" alt="Related Work 3">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Detail</title>
+    <style>
+        /* 기본 설정 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            background: #fff;
+        }
+
+        .container {
+            /* 전체 컨테이너의 상단 및 좌우 마진 조정 */
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            max-width: 1200px;
+            margin: 100px auto; /* 상단 및 하단 여백 80px */
+            padding: 0 100px;   /* 좌우 여백 40px */
+            gap: 35px;
+            align-items: start;
+        }
+
+        /* 좌측 섹션: 이미지 블록 */
+        .image-block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* 이미지들을 우측 정렬 */
+            gap: 30px;
+        }
+
+        .image-block img {
+            width: 80%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        /* 우측 섹션: 텍스트 블록 */
+        .text-block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .text-block h1 {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+
+        .text-block .meta {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 3px;
+        }
+
+        .text-block p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* 비슷한 작업 섹션 */
+        .related-works {
+            grid-column: span 2;
+            padding: 0 100px;
+            margin-top: 100px; /* Related Works 섹션 위의 마진 조정 */
+        }
+
+        .related-works h2 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .related-works .related-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-start;
+        }
+
+        .related-works .related-item img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .related-item a:hover img {
+            transform: scale(1.05); /* 호버 시 이미지 확대 */
+            transition: transform 0.3s;
+        }
+
+        /* 뒤로가기 버튼 */
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 30px;
+            color: black;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 뒤로가기 링크 -->
+    <a href="index.html" class="back-link">←</a>
+
+    <!-- 메인 컨테이너 -->
+    <div class="container">
+        <!-- 좌측 섹션 -->
+        <div class="image-block">
+            <!-- 좌측 이미지: 우측 정렬됨 -->
+            <img src="sources/ISA.png" alt="Thumbnail">
+            <video controls width="560" height="315">
+                <source src="sources/isa.mp4" type="video/mp4">
+                
+            </video>
+            
+            <!-- <img src="sources/icc8-3.png" alt="Additional Image"> -->
+        </div>
+
+        <!-- 우측 섹션 -->
+        <div class="text-block">
+            <h1>Underwater Waves</h1>
+            <p class="meta">2024년 5~6월<br>사운드 인터랙티브 아트, max </p>
+            <!-- <p> 2023년 서강대학교 밴드의 연합공연 비주얼 작업입니다. 밴드의 음악으로 불특정 다수가 ‘우리’라는 공동체로 모여 밤을 비출 수 있음을 시각적으로 전달하는 데 집중했습니다. 밴드는 보컬과 세션 다수가 모여 하나의 곡을 완성합니다. 공연을 올리기까지 각자의 연주를 공동의 음악으로 맞춰가는 합주의 과정을 밴드와 밴드 공연의 특징으로 보고, 최초로 단일 시점에서의 움직임에 대한 사진을 연구한 생리학자 쥘 마레의 <육체 이동에 관한 연속촬영>의 일부분을 통해 표현했습니다. 
+            </p> -->
+            <!-- <p>Instagram @expandedkr</p> -->
+        </div>
+    </div>
+
+    <!-- 비슷한 작업 섹션 -->
+    <div class="related-works">
+        <h2>Related Works</h2>
+        <div class="related-grid">
+            <!-- 첫 번째 작업물 -->
+            <div class="related-item">
+                <a href="sarock_detail.html">
+                    <img src="sources/여름밤에우린.png" alt="Related Work 1">
+                </a>
+            </div>
+            <!-- 두 번째 작업물 -->
+            <div class="related-item">
+                <a href="pride_detail.html">
+                    <img src="sources/Pride_표지-06.png" alt="Related Work 2">
+                </a>
+            </div>
+            <!-- 세 번째 작업물 -->
+            <div class="related-item">
+                <a href="atc_detail.html">
+                    <img src="sources/ATC 스티커 모션그래픽.gif" alt="Related Work 3">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
